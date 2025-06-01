@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const urlSchema = new mongoose.Schema(
+const urlSchema = new mongoose.Schema(  // video 21
   {
     shortId: {
       type: String,
@@ -20,5 +20,5 @@ const urlSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const URL = mongoose.model("url", urlSchema);
-module.exports = URL;
+const URL = mongoose.model("url", urlSchema); 
+module.exports = URL; 
