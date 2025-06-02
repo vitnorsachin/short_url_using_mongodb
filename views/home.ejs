@@ -1,3 +1,4 @@
+<!-- video 22 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,7 +38,7 @@
           <button type="submit">Generate</button>
         </form>
         <%if(locals.id){%>
-        <p>URL Generated : <b>http://localhost:8001/url/<%= id %></b></p>
+        <p>URL Generated : <a href="http://localhost:8001/url/<%= id %>"><b>http://localhost:8001/url/<%= id %></b></a></p>
         <%}%>
       </div>
 
@@ -49,6 +50,7 @@
             <th>S.No</th>
             <th>ShortID</th>
             <th>Redirect</th>
+            <th>Redirect Links</th>
             <th>Clicks</th>
           </thead>
           <tbody>
@@ -57,6 +59,7 @@
               <td><%= index + 1 %></td>
               <td><%= url.shortId %></td>
               <td><%= url.redirectURL %></td>
+              <td><a href="http://localhost:8001/url/<%= url.shortId %>"><b>http://localhost:8001/url/<%= url.shortId %></b></a></td>
               <td><%= url.visitHistory.length %></td>
             </tr>
             <%})%>

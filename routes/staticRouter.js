@@ -3,7 +3,7 @@ const URL = require("../models/url");
 
 const router = express.Router();
 
-router.get("/", async (req, res) => {
+router.get("/", async (req, res) => {                       // video 22
   if (!req.user) return res.redirect("/login");
   const allurls = await URL.find({ createBy: req.user._id });
   return res.render("home", {

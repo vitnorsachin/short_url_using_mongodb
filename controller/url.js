@@ -11,7 +11,7 @@ async function handlegenerateNewShortURL(req, res) { // video 21
     visitHistory: [],
     createBy: req.user._id,
   });
-  return res.render("home", {
+  return res.render("home", {                        // video 22
     id: shortID,
   });
 }

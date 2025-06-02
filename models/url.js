@@ -11,10 +11,9 @@ const urlSchema = new mongoose.Schema(  // video 21
       type: String,
       require: true,
     },
-    visitHistory: [{ timestamp: { type: Number } }],
-    createBy: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "users",
+    visitHistory: [ { timestamp: { type: Number } }],
+    createBy: { 
+      type: mongoose.Schema.Types.ObjectId, ref: "users" 
     },
   },
   { timestamps: true }
